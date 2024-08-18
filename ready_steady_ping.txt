@@ -1,0 +1,13 @@
+1. ping 127.0.0.1
+Time taken: Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+2.
+
+(fastest)
+qoo10.sg Average = 3ms
+Lazada.sg  Average = 4ms
+Beyonce.com Average = 5ms
+dbs.com.sg Average = 7ms
+Oscar.org  Average = 197ms
+Disney.com Average = 238ms
+(slowest)

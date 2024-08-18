@@ -1,0 +1,10 @@
+IP Address: 192.168.0.28
+This IP Address falls in the range of 192.168.0.0 to 192.168.255.255, thus it is a private IP Address.
+
+Public IP address: 49.245.105.94
+Most home and small business routers use Network Address Translation (NAT) to map internal private IP addresses to a single public IP address. This allows multiple devices on the local network to share a single public IP address.
+
+Geolocation
+Country I am in is Singapore. City is also Singapore.
+
+There are many IP Address associated with www.google.com. Using ipinfo.io, it is located in California, US. This makes sense because this is likely where Google headquarters is located.

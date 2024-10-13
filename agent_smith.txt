@@ -1,0 +1,15 @@
+Step 1 - Desktop Mode
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+
+The portion that identifies my device type is: X11; Linux x86_64
+
+Step 2 - Mobile Mode
+User-Agent: Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-G973U) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/14.2 Chrome/87.0.4280.141 Mobile Safari/537.36\r\n
+
+The portion that identifies my device type is: Android 11; SAMSUNG SM-G973U
+
+The main difference between this one and the earlier one (captured desktop mode vs mobile mode) is:
+The User-Agent in Mobile Mode identifies the device type as a Samsung mobile phone device, as opposed to a Linux computer.
+
+The differences in the User-Agent strings reflect the different environments of desktop and mobile devices. 
+Desktops are designed for larger displays and higher processing power, while mobile browsers are optimized for smaller screens and touch input.

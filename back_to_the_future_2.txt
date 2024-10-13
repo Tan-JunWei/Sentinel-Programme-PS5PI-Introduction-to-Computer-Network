@@ -1,0 +1,12 @@
+Task 1: Inspect HTTP Headers
+
+I was able to recognise familiar information. For example, I was able to identify the GET request method, the URL and a Status Code of 
+304 Not Modified.
+
+The 'Accept' header under Request Headers shares information and preferences about the client requesting for a service from the server. 
+It can help the server tailor the response that will eventually be sent to the client.
+
+Task 2: Manipulate the html
+
+I think browsers allow users to change the page easily to allow them to adjust how the elements are displayed according to their liking and preferences.
+This introduces a layer of flexibility instead of rigidity that can be helpful for accessibility or convenience (changing size of elements, etc).

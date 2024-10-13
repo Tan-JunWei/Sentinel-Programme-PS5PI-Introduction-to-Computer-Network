@@ -1,0 +1,16 @@
+Task 1: Decode a URL
+Component Meaning of "http://" (Scheme): The scheme informs web servers which protocol to use when it accesses a page on the website.
+Component Meaning of "www.example.com" (Hostname): A hostname is the unique identifier of a server service available on a network.
+Component Meaning of "index.html" (Path): The path refers to the exact location of a page, post, file, or other asset that a user may want to access.
+
+Task 2: Dissect an HTTP Request
+GET Request Purpose: Used to request data from a specified resource
+/index.html Description: URL Path of the resource. A relative path is used here.
+/index.html Purpose: Identifies the resource on the server
+HTTP/1.1 Description: Version of HTTP protocol
+HTTP/1.1 Purpose: Ensures compatibility between the client and server
+Host Purpose: Identify the server that stores and provides a service to the client
+
+Task 3: Construct an HTTP Request
+GET /TheProject.html HTTP/1.1
+Host: http://info.cern.ch/hypertext/WWW

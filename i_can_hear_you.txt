@@ -1,0 +1,40 @@
+Part 1: Status Line
+
+Component: HTTP/1.1
+Meaning: Version of HTTP Protocol used in the communication
+Component: 200 OK
+Meaning: Successful response status code that indicates a request has succeeded
+
+Part 2: Headers
+"Content-Type:" (Header) Purpose: Informs the client about the media type of the returned data.
+"Server:" (Header) Purpose: Indicates the software used by the origin server that handled the request and generated a response.
+"Content-Length:" (Header) Purpose: Indicates the size of the response data in bytes.
+
+Why does the browser need Content-Type and Content-Length?
+The browser requires the Content-Type to handle and process the content correctly. The Content-Length helps the browser to know how much data to expect.
+
+As cyber security researchers, how can the server header help us (or help potential attackers)?
+The server header reveals information about the software (and its version) running on a server. If an outdated version of a software is used, researchers 
+or potential attackers can check the vulnerabilities associated with it.
+
+Bonus tasks (optional): Explore HTTP Status Codes
+
+Status Code Number: 200
+Complete Status Code: 200 OK
+When does this happen? Page requested has been fetched
+
+Status Code Number: 404
+Complete Status Code: 404 Not Found
+When does this happen? Server has not found anything after a user requests a URL
+
+Status Code Number: 500
+Complete Status Code: 500 Internal Server Error
+When does this happen? Server encounters an unexpected situation
+
+Status Code Number: 301
+Complete Status Code: Permanent redirect
+When does this happen? The page a user has requested for has moved to a new URL permanently
+
+Status Code Number: 403
+Complete Status Code: 403 Forbidden
+When does this happen? Request is understood by server, but the server refuses to fufill it

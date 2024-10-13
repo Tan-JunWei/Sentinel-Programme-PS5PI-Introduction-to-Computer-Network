@@ -1,0 +1,10 @@
+Command used:
+echo -e "GET /hypertext/WWW/TheProject.html HTTP/1.1\r\nHost: info.cern.ch\r\nConnection: close\r\n\r\n" | nc -v info.cern.ch 80
+
+For some reason, nc kept automatically submitting my unfinished HTTP request, causing me to receive a 400 Bad Request Status Code 
+repeatedly, hence I used echo to submit the HTTP request instead.
+
+After copying the HTML content into notepad and saving it as cern.html, I was able to see the homepage of the WWW project.
+
+As tasked, when I tried to access https://info.cern.ch/notexisting using Netcat, I received the 404 Not Found Status Code. 
+This is because this page does not exist on the server, and thus is unable to be fetched.

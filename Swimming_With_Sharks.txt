@@ -1,0 +1,27 @@
+## Leaks within Alex's PCAP file
+
+1. Password to login to FTP server using vsFTPd: L@wyer9
+
+220 (vsFTPd 3.0.3)
+AUTH TLS
+530 Please login with USER and PASS.
+AUTH SSL
+530 Please login with USER and PASS.
+USER alex
+331 Please specify the password.
+PASS L@wyer9
+230 Login successful.
+
+2. Leaked email address: alex@chanltd.com.sg
+3. Password to login to alex@chanltd.com.sg: "L@wyer999"
+
+* SEND MSG "Hey david. I've looked at your case and I will represent you at court. It's very important that you get rid of the photos you showed me. The police may search your place at any moment. Keep in touch, Alex
+41 CAPABILITY
+* CAPABILITY IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=ORDEREDSUBJECT THREAD=REFERENCES SORT QUOTA IDLE
+41 OK CAPABILITY completed
+42 LOGIN alex@chanltd.com.sg "L@wyer999"              
+42 OK LOGIN Ok.
+43 STATUS "INBOX.Unwanted" (UIDVALIDITY)
+* STATUS "INBOX.Unwanted" (UIDVALIDITY 1453845335)
+43 OK STATUS Completed.
+

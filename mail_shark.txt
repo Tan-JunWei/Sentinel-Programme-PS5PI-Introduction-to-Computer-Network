@@ -1,0 +1,20 @@
+## Mail Shark
+
+2. The port (in the server side) of SMTP is 587.
+
+3. The IP address of the person(Gurpartap Singh) that's sending the mail is 10.10.1.4. The IP address of the SMTP server is 74.53.140.153.
+
+4. The email is from Gurpartap Singh (gurpartap@patriots.in), it is to raj_deol2002in@yahoo.co.in.
+
+5. The subject of the mail is SMTP.
+   The content of the mail is:
+
+Hello
+
+I send u smtp pcap file 
+
+Find the attachment
+
+GPS
+
+6. The base64 encoded string is "cHVuamFiQDEyMw==" (padding included). Hence, the decoded decoded base64 string, the password, is "punjab@123".

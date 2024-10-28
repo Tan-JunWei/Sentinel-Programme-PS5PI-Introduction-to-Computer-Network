@@ -1,0 +1,11 @@
+Current IP address: 10.1.126.112
+
+7. Number of echo requests: 10
+Number of echo replies: 8
+
+8. IP of wikipedia.org: 103.102.166.224
+9. Delay between every ping request is about 1 second.
+
+10. When we ping 51.51.51.51, we get an error message saying "request timed out." This means that it is unreachable.
+
+11. The small text message is "abcdefghijklmnopqrstuvwabcdefghi".

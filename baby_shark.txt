@@ -1,0 +1,10 @@
+Step 2 - Basic filtering
+6. 138 packets were captured overall
+7. http
+8. 2
+9. ip.addr == 192.168.0.25
+10. ip.src== 192.168.0.25 && http
+
+Step 3 - Looking for data
+11. The client and the server each sent 1 message.
+12. From the response header, I can find out that the server is ECAcc (lac/55B8). Both the server type and version can be deduced.

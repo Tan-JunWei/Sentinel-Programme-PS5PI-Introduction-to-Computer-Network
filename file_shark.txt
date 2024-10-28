@@ -1,0 +1,109 @@
+2. Short description of the FTP protocol:
+
+FTP stands for File Transfer Protocol, which is a standard communication protocol that is used for the transfer of files between computers over TCP/IP connections, on a computer network. 
+
+Within the TCP/IP protocol suite, it is considered an application protocol. 
+
+FTP allows for the transfer of files via the Internet. It works by opening two connections that link the computers trying to communicate with each other. A typical FTP communications works as follows:
+
+a. A user logs on to a FTP server (some do not require login - anonymous FTP). The user is known as the client.
+
+b. The client initiates a communication with the server when the user requests to download a file.
+
+c. A client can upload, download, delete, rename, move and copy files on a server using FTP.
+
+To enable secure transmission of data that protects both the username and password of the parties involved in a communication, FTP is often secured with SSL/TLS (File Transfer Protocol Secure (FTPS)) or replaced with SSH File Transfer Protocol (SFTP).
+
+## Conversations in the pcap file
+
+220 Welcome to kernel.org
+USER ftp
+331 Please specify the password.
+PASS jowens@yccc.edu
+230 Login successful.
+SYST
+215 UNIX Type: L8
+FEAT
+211-Features:
+ EPRT
+ EPSV
+ MDTM
+ PASV
+ REST STREAM
+ SIZE
+ TVFS
+ UTF8
+211 End
+PWD
+257 "/"
+CWD /pub/linux/devel/gcc/
+250 Directory successfully changed.
+PWD
+257 "/pub/linux/devel/gcc"
+EPSV
+229 Entering Extended Passive Mode (|||30112|).
+LIST
+150 Here comes the directory listing.
+226 Directory send OK.
+TYPE I
+200 Switching to Binary mode.
+SIZE sha256sums.asc
+213 970
+EPSV
+229 Entering Extended Passive Mode (|||30490|).
+RETR sha256sums.asc
+150 Opening BINARY mode data connection for sha256sums.asc (970 bytes).
+226 Transfer complete.
+MDTM sha256sums.asc
+213 20140401184724
+QUIT
+221 Goodbye.
+
+The above shows an FTP session where the user logged into the kernel.org server, navigated to the `/pub/linux/devel/gcc/` directory, and successfully downloaded the file `sha256sums.asc`. The user also checked the file size and last modification time before ending the session.
+
+
+
+drwxr-xr-x    2 ftp      ftp          4096 Mar 20  2003 cross
+drwxr-xr-x    2 ftp      ftp          4096 Mar 20  2003 egcs-1.1.2
+drwxr-xr-x    2 ftp      ftp          4096 Jun 23  2004 float128
+drwxrwxr-x    2 ftp      ftp          4096 Oct 19  1999 gcc-2.7.2.3
+-rw-r--r--    1 ftp      ftp          2077 Mar 26  2001 gcc-2.95-glibc.patch
+drwxr-xr-x    2 ftp      ftp          4096 May 03  2000 gcc-2.95.x
+drwxr-xr-x    4 ftp      ftp          4096 Oct 19  2010 kernel
+drwxr-xr-x    3 ftp      ftp          4096 Jun 06  2011 lto
+-rw-r--r--    1 ftp      ftp           970 Apr 01 18:47 sha256sums.asc
+drwxr-xr-x    2 ftp      ftp          4096 Aug 24  2004 unwind
+
+This shows the files and subdirectories under the `/pub/linux/devel/gcc/` directory.
+
+
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+5165538dc0e07004442b595027aeca9b53bea06ef4fcf2599dac8c29142bb467  gcc-2.95-glibc.patch
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQIcBAEBAgAGBQJTOwm6AAoJEGMtOgZYnaaxk/EP/ixiCBQru31Z+4cXEFyVOay1
+UtREmJL377FCIkyd562lSu8ZyF1wQQ+6ns8/ylGUJzHGBrpkM0glVHigbJBLrFPe
+V0d8AT3T5xBroUEQA45CdHIhuT4a9+6GnIw7ttQvUzymYBmavHh1iUETG7xtN/PX
+vBgang/4T8MWnzSZ/D1VNeZM5URi5x+LaA+sWcDyImCdaLBMvlNNV/kI4gZMP9lQ
+L5Zh5MfS00r5tfaJnCNTtT5ZkQyoRUOD2bfdzudXOapTMqudgntkO4atbJUWG1Ei
+BZpYKlHeJgDjEDqn/XHbxGGW62C2LZUy64ju0hUbVd7F4arMK747Bg6/Zpz5CoKb
+D7Fgd4Eck5Y9s5pTCqNflSENeEpU926OEjmwyQHtNJshVM4Nyucd9DHMmIvUMf1W
+r4ccofkdeQQBEKketpG4r4rxmXZQffJEOB+Jb4dN4ae7p+CzOjnDrFHaaGiBITEy
+w0Fho/1LCW673uUn+kg4PpZdw+TFB0JQ7OPaytD9/lSUDpCD/MJfwAQjFynmlMvv
+yzyBDo6EFC8gaPgh2NUS8Z/NzHcot0dZmvrowz+RIphg9JSZxqko6Qd1QhlGfcaM
+Hg/8NO4s6wnAVEILp1a3UAU+NsHeOpSUbn1MzGI3fHGFWGG+D8a3Z7Hq76hkD1ye
++SGf00wxM4kOMT6JS/GL
+=KodN
+-----END PGP SIGNATURE-----
+
+This shows the Pretty Good Privacy signed message. 
+"5165538dc0e07004442b595027aeca9b53bea06ef4fcf2599dac8c29142bb467" is the SHA-1 hash of the file "gcc-2.95-glibc.patch".
+
+Purpose of PGP Signing:
+Authenticity: Ensures that the message was created by a known sender.
+Integrity: Confirms that the message has not been altered in transit. If the file content changes, its hash will not match the provided hash.
+

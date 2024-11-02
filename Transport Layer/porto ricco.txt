@@ -1,0 +1,57 @@
+Task 1: Why ports? ---------------------------------------------------------------
+1. We need port numbers as they identify a particular application or service on a system. IP addresses only identifies a machine in an IP network and determines the destination (computer). 
+
+2. 
+When a client connects to a server, the source and destination port of the request are the same
+[FALSE]
+Source ports are usually randomly generated from the unregistered port range, which is also known as dynamic/ephemeral port range (49152 to 65535). On the other hand, the destination port identifies the unique service on the destination computer. For example, a request may contain a random source port number like 50385 and a commonly known destination port number like 80 (HTTP).
+
+When a client connects to a server, the destination port of the request is different every time.
+[FALSE]
+Since the client may be requesting a response from the same service/application, the destination port number will be the same in situations like this. For example, if a user repeatedly accesses a website, the destination port will likely remain 80 or 443 each time he connects.
+
+When a client connects to a server, the source port of the request is (usually) different every 
+time
+[TRUE]
+As mentioned above, source port numbers are usually randomly generated from the ephemeral port range. Thus the source ports of the request will be likely different every time a client connects to a server.
+
+When multiple clients connect to a server, the destination port of the request is different for 
+each client
+[FALSE]
+Although multiple clients connect to a server at the same time, the destination port of the request can be the same for all clients if they are running the same application/service. 
+
+When multiple clients connect to a server, the source port of the request is (usually) different for each client
+[TRUE]
+As mentioned above, source port numbers are usually randomly generated from the ephemeral port range. In this case, the source ports for each client will be random, and are thus unlikely to have the same source port of the request.
+
+Task 2: UDP vs.TCP Comparison --------------------------------------------------------
+Characteristic        |    UDP    |   TCP
+Connecton-oriented?   |    No     |   Yes
+Reliable?             |    No     |   Yes
+Ordered?              |    No     |   Yes
+Speed (Faster/Slower) |   Faster  |  Slower
+Overhead (High/Low)   |    Low    |   High
+
+Task 3: Application Examples --------------------------------------------------------
+Video Streaming          |    UDP    | Retransmission of packets would cause the video to be choppy. UDP is used for real-time delivery.
+Email                    |    TCP    | Important to ensure that the email is sent correctly as some are important communications.
+Online multiplayer game  |    UDP    | Retransmission of packets would cause gameplay to be choppy. Speed is also a concern here (UDP minimizes latency)
+File transfer            |    TCP    | Ensure that important files are transferred appropriately without any error (Integrity). 
+Live Audio Streaming     |    UDP    | Audio may become choppy if retransmitted. UDP is used for real-time delivery, without any delays.
+Web Browsing             |    TCP    | Ensure that the webpages and date are fetched and received successfully.
+DNS                      |    UDP    | Speed is more critical than reliability, a small number of lost packets are acceptable.
+HTTPS                    |    TCP    | Ensures reliable delivery of web content, crucial for user experience and data integrity.
+
+Task 4: Common port numbers and their uses --------------------------------------------
+Port Number  |   Service/Protocol   |  Use
+20,21        |         FTP          |  Transferring files (upload and download) to and from a remote server
+22           |         SSH          |  Secure remote login from one computer to another
+23           |        Telnet        |  Provides access to virtual terminals of remote systems 
+25           |         SMTP         |  Responsible for sending and receiving emails
+53           |         DNS          |  Translates human-readable domain names to machine-readable IP addresses
+80           |         HTTP         |  Fetching resources such as HTML documents
+443          |        HTTPS         |  Secure encrypted version of HTTP, used to send data between a web browser and a website
+
+
+
+

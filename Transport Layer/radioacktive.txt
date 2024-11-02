@@ -1,0 +1,15 @@
+Scenario 1: Everything is OK - A packet is sent by the client and the server receives it
+An acknowledgement (ACK) will be sent by the server, because the server receives the packet sent by the client. There is no need for retransmission as the communication was successful.
+
+Scenario 2: Packet Loss - A packet is sent by the client and lost on its way 
+An acknowledgement (ACK) will not be sent by the server as it did not receive the packet sent by the client. Retransmission of the original packet by the client will be required.
+
+Scenario 3: Packet Duplication - A packet sent by the client. The server sends an ACK, but it's lost on its way
+Since the client does not receive an ACK within the expected timeframe, it assumes the original packet was lost and retransmits the packet.
+When the server receives the retransmitted packet, it recognizes it as a duplicate, typically based on sequence numbers, and discards it. The server sends a new ACK to acknowledge the retransmitted packet.
+
+Scenario 4: Packet Corruption - A packet from the client arrives at the server with errors (corrupted data)
+When the server receives the packet containing corrupted data, it detects that there are errors within the packet. The server, hence, will not send an acknowledgement (ACK) to the client. By not acknowledging corrupted packets, the server signals to the client that the transmission was unsuccessful, and prompts the client to retransmit the original packet.
+
+Scenario 5: Out-of-Order Packet Delivery - Packets from the client arrive at the server out of order.
+When the server receives packets that are out of order from the client, it will use the Sequence numbers specified in the packet header to rearrange these packets in the correct order, sending appropriate ACKs during this process. The client will not resend the original packet.

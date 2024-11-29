@@ -1,0 +1,8 @@
+Default gateway IP address is 192.168.0.1.
+
+Subnet mask of my local network is 255.255.255.0.
+
+The IP range of my home network (that is valid for host assignment) is 192.168.0.1 to 192.168.0.254. 
+
+192.168.0.0 is the network address, which refers to the network itself.
+192.168.0.255 is the broadcast address, which is an invalid host address.

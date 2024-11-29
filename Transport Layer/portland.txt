@@ -1,0 +1,3 @@
+Local address and port: 172.23.35.228:50954
+Foreign address and port: 93.184.216.34:443
+Connection state: ESTABLISHED

@@ -1,0 +1,56 @@
+Switch 2: More fun with packets! 🌐🌐
+
+Swift: 4-port switch (ports 1-4)
+Port 1: Connected to Device A 
+Port 2: Connected to Device B 
+Port 3: Connected to Device C
+Port 4: Connected to Taylor port 1
+
+Taylor: 4-port switch (ports 1-4)
+Port 1: Connected to Swift port 4
+Port 2: Connected to Device D 
+Port 3: Connected to Device E 
+Port 4: Connected to Device F
+
+Device A: MAC address: 00:11:22:33:44:55, connected to Swift port 1 
+Device B: MAC address: AA:BB:CC:DD:EE:FF, connected to Swift port 2 
+Device C: MAC address: 12:34:56:78:9A:BC, connected to Swift port 3 
+Device D: MAC address: DE:F0:12:34:56:78, connected to Taylor port 2 
+Device E: MAC address: 98:76:54:32:10:FE, connected to Taylor port 3
+Device F: MAC address: 11:22:33:44:55:66, connected to Taylor port 4
+
+Packet Flow
+1. Packet 1: Source MAC: 00:11:22:33:44:55 (Device A), Destination MAC: AA:BB:CC:DD:EE:FF (Device 
+B)
+2. Packet 2: Source MAC: AA:BB:CC:DD:EE:FF (Device B), Destination MAC: 00:11:22:33:44:55 (Device 
+A)
+3. Packet 3: Source MAC: 12:34:56:78:9A:BC (Device C), Destination MAC: DE:F0:12:34:56:78 (Device 
+D)
+4. Packet 4: Source MAC: 98:76:54:32:10:FE (Device E), Destination MAC: 11:22:33:44:55:66 (Device 
+F)
+5. Packet 5: Source MAC: 00:11:22:33:44:55 (Device A), Destination MAC: 98:76:54:32:10:FE (Device 
+E)
+6. Packet 6: Source MAC: 12:34:56:78:9A:BC (Device C), Destination MAC: FF:FF:FF:FF:FF:FF 
+(Broadcast)
+7. Packet 7: Source MAC: 11:22:33:44:55:66 (Device F), Destination MAC: 00:11:22:33:44:55 (Device 
+A)
+8. Packet 8: Source MAC: DE:F0:12:34:56:78 (Device D), Destination MAC:
+AA:BB:CC:DD:EE:FF (Device B)
+
+Instructions
+For each packet in the packet flow, determine which ports on Swift and Taylor the packet will be 
+sent to based on their current switching tables. Fill in the table below, indicating the port 
+number(s) or "Broadcast" if the packet is broadcast to all ports except the one on which it was received.
+
+
+| Packet | Swift Port(s)    | Taylor Port(s) |
+|--------|------------------|----------------|
+| 1      | P2               | -              |
+| 2      | P1               | -              |
+| 3      | P4               | P2             |
+| 4      | -                | P4             |
+| 5      | P4               | P3             |
+| 6      | P1, P2, P4       | P2, P3, P4     |
+| 7      | P1               | P4             |
+| 8      | P2               | P4             |
+

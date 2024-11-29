@@ -1,0 +1,91 @@
+ARP Shark 🦈
+
+# Info about packets in the provided ARP capture file
+
+Packet 1
+Ethernet Layer
+- Source MAC: aa:bb:cc:dd:ee:ff
+- Destination MAC: ff:ff:ff:ff:ff:ff (broadcast)
+
+ARP Layer
+- Is it a request or reply? It is a request
+- Sender MAC: aa:bb:cc:dd:ee:ff
+- Sender IP address: 192.168.1.1
+- Target MAC: 00:00:00_00:00:00 
+- Target IP address: 192.168.1.100
+
+Purpose of the packet: The packet is a ARP request sent to all devices on the network, to try to find the MAC address associated with the device with the target IP address of 192.168.1.100
+
+Packet 2
+Ethernet Layer
+- Source MAC : 52:1a:7f:9b:3e:cd 
+- Destination MAC: aa:bb:cc:dd:ee:ff
+
+ARP Layer
+- Is it a request or reply? It is a reply
+- Source MAC : 52:1a:7f:9b:3e:cd 
+- Sender IP address: 192.168.1.100
+- Target MAC: aa:bb:cc:dd:ee:ff
+- Target IP address: 192.168.1.1
+
+Purpose of the packet: The packet is a ARP reply from the device with the IP address of 192.168.1.100, sent to device that requested for the MAC address of this device.
+
+Packet 3
+Ethernet Layer
+- Source MAC: aa:bb:cc:dd:ee:ff
+- Destination MAC: ff:ff:ff:ff:ff:ff (broadcast)
+
+ARP Layer
+- Is it a request or reply? It is a request
+- Sender MAC: aa:bb:cc:dd:ee:ff
+- Sender IP address: 192.168.1.1
+- Target MAC: 00:00:00:00:00:00
+- Target IP address: 192.168.1.150
+
+Purpose of the packet: The packet is an ARP request sent to all devices on the network, to try to find the MAC address associated with the device with the target IP address of 192.168.1.150
+
+Packet 4
+Ethernet Layer
+- Source MAC : a6:4f:2d:8e:7c:51 
+- Destination MAC: aa:bb:cc:dd:ee:ff
+
+ARP Layer
+- Is it a request or reply? It is a reply
+- Source MAC : a6:4f:2d:8e:7c:51 
+- Sender IP address: 192.168.1.150
+- Target MAC: aa:bb:cc:dd:ee:ff
+- Target IP address: 192.168.1.1
+
+Purpose of the packet: The packet is a ARP reply from the device with the IP address of 192.168.1.150, sent to device that requested for the MAC address of this device.
+
+Packet 5
+Ethernet Layer
+- Source MAC: aa:bb:cc:dd:ee:ff
+- Destination MAC: ff:ff:ff:ff:ff:ff (broadcast)
+
+ARP Layer
+- Is it a request or reply? It is a request
+- Sender MAC: aa:bb:cc:dd:ee:ff
+- Sender IP address: 192.168.1.1
+- Target MAC: 00:00:00:00:00:00
+- Target IP address: 10.0.0.200
+
+Purpose of the packet: The packet is an ARP request sent to all devices on the network, to try to find the MAC address associated with the device with the target IP address of 10.0.0.200
+
+
+
+3. Answer the following questions:
+What is the purpose of an ARP request?
+It requests for the MAC address associated with the target IP address.
+
+What is the purpose of an ARP reply?
+It is a response to an ARP request, containing the MAC address of the device associated with the IP address stated in the request.
+
+What's the difference between the Destination MAC address in ARP replies and ARP requests? Why is 
+that?
+The destination MAC address in ARP replies is the MAC address of the device that sent the ARP request. However, the destination MAC address in the ARP request is ff:ff:ff:ff:ff:ff, which is the broadcast MAC address. This specifies that this packet is sent to all devices on the network.
+
+For the last packet - why do you think there is no ARP reply for this request? Try to give several 
+possible reasons, based on what you see.
+
+

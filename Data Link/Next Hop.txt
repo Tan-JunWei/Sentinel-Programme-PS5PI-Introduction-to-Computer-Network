@@ -1,0 +1,34 @@
+Next Hop
+
+Task
+A to B
+Fill in the table below with the source and destination IP and MAC addresses at each hop as a 
+packet is sent from device A to device B.
+
+
+| Hop    | Source IP        | Destination IP | Source MAC        | Destination MAC   |
+|--------|------------------|----------------|-------------------|-------------------|
+| 1      |  192.168.1.100   |  192.168.2.200 | 52:1a:7f:9b:3e:cd | 00:11:22:33:44:55 |
+| 2      |  192.168.1.100   |  192.168.2.200 | 00:11:22:33:44:55 | 00:aa:bb:cc:dd:ee |
+| 3      |  192.168.1.100   |  192.168.2.200 | 00:aa:bb:cc:dd:ee | ac:de:48:8b:9f:c2 |
+
+
+
+
+B to A
+Now B sends a reply packet back to A. Fill in the table below with the source and destination IP and 
+MAC addresses at each hop as a packet is sent from device B to device A.
+
+| Hop    | Source IP        | Destination IP | Source MAC        | Destination MAC   |
+|--------|------------------|----------------|-------------------|-------------------|
+| 1      |  192.168.2.200   |  192.168.1.100 | ac:de:48:8b:9f:c2 | 00:ee:dd:cc:bb:aa |
+| 2      |  192.168.2.200   |  192.168.1.100 | 00:ee:dd:cc:bb:aa | 00:55:44:33:22:11 |
+| 3      |  192.168.2.200   |  192.168.1.100 | 00:55:44:33:22:11 | 52:1a:7f:9b:3e:cd |
+
+
+Explanation of why addresses change/ do not change at each hop
+
+The IP addresses remain the same at each hop, since the source and destination IP addresses of the device remains the same. 
+
+The MAC addresses change at each hop as the packet is transmitted from one device to another, with each device having a unique MAC address. At each device, the next corresponding MAC address is updated for the packet to be transmitted to that specific MAC address.
+

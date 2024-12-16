@@ -1,0 +1,36 @@
+Router Interface Configuration
+eth0: 192.168.1.1/24 (192.168.1.x)
+eth1: 10.0.0.1/8 (10.x.x.x)
+eth2: 172.16.0.1/16 (172.16.x.x)
+
+
+Routing Table
+Destination	Subnet Mask		Next-hop
+0.0.0.0		0.0.0.0			10.0.0.2
+10.0.0.0	255.0.0.0		On-link
+172.16.0.0	255.255.0.0		On-link
+172.17.0.0	255.255.0.0		172.16.0.2
+192.168.1.0	255.255.255.0		On-link
+192.168.2.0	255.255.255.0		10.0.0.2
+192.168.3.0	255.255.255.0		172.16.0.2
+
+
+For each of the following destination IP addresses, determine the next hop based on the router's 
+routing table. If the destination is directly connected,
+write "Direct". If there is no route to the destination, write "No Route".
+
+IP 			Next Hop
+1. 192.168.1.100	Direct
+2. 10.0.0.5		Direct
+3. 172.17.1.200		172.16.0.2
+4. 192.168.2.50		10.0.0.2
+5. 192.168.3.150	172.16.0.2
+6. 172.16.0.1		Direct
+7. 8.8.8.8		10.0.0.2	
+8. 192.168.4.100	No Route
+
+
+
+
+
+

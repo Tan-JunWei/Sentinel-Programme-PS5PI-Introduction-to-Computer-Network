@@ -1,0 +1,26 @@
+The content of the Set-Cookie header is given as:
+set-cookie:
+session-token=qIcJz+Y9g4mdCc1pkIaw2AUNuiOowW8BWEFPFYt2AlxxaLpuGDLVqs0AbLyn+9g730sKtQ9zzsI3lDM8EsZqHN5HUo9p6dw8qFc7cKvhtZIHLYR9WOnhFplqdDTMa79UoLBYcIB/oEAEcCHlKUBW8qceIXUb+QXFCHys+ob8qy3zENwexq/KGgEhPQ89JQMYI9VZFaToverOZ2oWsxA49I6NQ8lyTqKfhKLVwAhQs8GFDMbJEc1cEyv9k8A3TZrRHLVZYAYffSKtbmZHM8ZkD50HQAMSO2suxHxaiG9Yxfvpb30AZEqaYDzXIdpdpYXKRPGGPh+kBBazCTNIF9+Ex/Vs1VLhLaWN; Domain=.amazon.com; Expires=Sun, 14-Dec-2025 04:37:28 GMT; Path=/; Secure
+
+The session-token cookie shows a long encoded string, as well as information like the expiry date and time of the cookie. Path=/ likely means that the cookie can be used for multiple pages using the amazon.com domain.
+
+
+
+After refreshing the website by pressing F5:
+
+set-cookie:
+session-token=NAsPfchmB98mRV0g6hovQISAYie56Ulgj3PxrrGwLmI9bVXGGSaooNBrueEVe5tNIsMhUSaug5/LCmzCoCiKVYbN//+ngGqlg6sXddiGOJRYj8WX6++oFcWSvRSNvWfwAORJ8TVJi4a5Pk++yGxVpSelpOAYDXBh7Oo2+2xv7cNmHmu8+1gPXsKNZ3TSKNWxAmjlms6pmbRiBEn0E719rMrA0xDATmrZ5T6a863M921//gIY+Cvgj73x3UDT3BARH0WuI9QoXMospwthxMEPDL4s/4h0rwIfcDvfPX83bUmAEfTUWpGS1Fmdrw3z9qGZ1yjKPQ2GFqMwPKTqK7S13RAg4AsvAF72; Domain=.amazon.com; Expires=Sun, 14-Dec-2025 04:43:23 GMT; Path=/; Secure
+
+As seen, the session-token cookies are different. Not only are the encoded strings different, the expiry date and time are also different.
+
+After changing language and currency (to Spanish):
+
+cookie:
+csm-sid=203-8957411-2628535; session-id=146-7527178-6790208; session-id-time=2082787201l; i18n-prefs=USD; sp-cdn="L5Z9:SG"; ubid-main=132-5562029-1653446; skin=noskin; x-amz-captcha-1=1734158248309401; x-amz-captcha-2=cUBe4jw68m0PwSP4+BXTuA==; session-token=wEn137peFdwlEHbX6VQJaYBy/mhy4FTYNkifz2XAyc+FLJlExmPFMb+2h4ezKLgyuq1SUiPuUAZR8p9LOGtYZrPiOb8FM2VEmb+6NRIYIKSi19Imivn0STePD9n7eavurSQNZGwBG7M80+GtfdreSvv8uaDt8vc8bLxKsOItnhfMB6oQghCUwcbqymiWjYVtTRcegTVo76yVdQhmP9TqKQ3Z+SZp+5GnbhgHtF2Vtu9t/eq441sUVxP/RF6yskJKg8xV462YLpGfvkTw/6p6a4AxBBLg/FbN2ems+JGBv+rv+XZR6w5+DYPEtRvpgedk2p8mCxYZqtNxMQNWD9S4aH/GlZNja/C+; lc-main=es_US; csm-hit=tb:99RR32RM85NZSHZVY697+s-99RR32RM85NZSHZVY697|1734152268731&t:1734152268731&adb:adblk_no
+
+
+(before)
+cookie:
+csm-sid=203-8957411-2628535; session-id=146-7527178-6790208; session-id-time=2082787201l; i18n-prefs=USD; sp-cdn="L5Z9:SG"; ubid-main=132-5562029-1653446; skin=noskin; x-amz-captcha-1=1734158248309401; x-amz-captcha-2=cUBe4jw68m0PwSP4+BXTuA==; session-token=wEn137peFdwlEHbX6VQJaYBy/mhy4FTYNkifz2XAyc+FLJlExmPFMb+2h4ezKLgyuq1SUiPuUAZR8p9LOGtYZrPiOb8FM2VEmb+6NRIYIKSi19Imivn0STePD9n7eavurSQNZGwBG7M80+GtfdreSvv8uaDt8vc8bLxKsOItnhfMB6oQghCUwcbqymiWjYVtTRcegTVo76yVdQhmP9TqKQ3Z+SZp+5GnbhgHtF2Vtu9t/eq441sUVxP/RF6yskJKg8xV462YLpGfvkTw/6p6a4AxBBLg/FbN2ems+JGBv+rv+XZR6w5+DYPEtRvpgedk2p8mCxYZqtNxMQNWD9S4aH/GlZNja/C+; lc-main=en_US; csm-hit=tb:Z1G4HA9SY3ED9TNRYA2B+s-Z1G4HA9SY3ED9TNRYA2B|1734152109002&t:1734152109002&adb:adblk_no
+
+The lc-main field of the cookies are different. After changing the language to Spanish, the value of lc-main was es_US. Prior to this, it was en_US.

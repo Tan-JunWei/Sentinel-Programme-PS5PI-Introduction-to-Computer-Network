@@ -1,0 +1,67 @@
+Router 1
++-------------------+--------------------+-------------------+
+|    Destination    |     Subnet Mask    |      Next-hop     |
++-------------------+--------------------+-------------------+
+|      0.0.0.0      |      0.0.0.0       |     10.0.0.2      |
+|      10.0.0.0     |   255.255.255.252  |      On-link      |
+|    192.168.1.0    |   255.255.255.0    |      On-link      |
++-------------------+--------------------+-------------------+
+
+Router 2
++-------------------+--------------------+-------------------+
+|    Destination    |     Subnet Mask    |      Next-hop     |
++-------------------+--------------------+-------------------+
+|      0.0.0.0      |      0.0.0.0       |     10.0.0.6      |
+|      10.0.0.0     |   255.255.255.252  |      On-link      |
+|    192.168.1.0    |   255.255.255.0    |     10.0.0.1      |
+|    192.168.2.0    |   255.255.255.0    |      On-link      |
++-------------------+--------------------+-------------------+
+
+Router 3
++-------------------+--------------------+-------------------+
+|    Destination    |     Subnet Mask    |      Next-hop     |
++-------------------+--------------------+-------------------+
+|      0.0.0.0      |      0.0.0.0       |     10.0.0.1      |
+|      10.0.0.0     |   255.255.255.252  |      On-link      |
+|    192.168.2.0    |   255.255.255.0    |     10.0.0.2      |
+|    192.168.3.0    |   255.255.255.0    |      On-link      |
++-------------------+--------------------+-------------------+
+
+1. 192.168.1.100 → 192.168.2.150
+List of routers the packet will go through: R1 → R2
+Relevant rows in the routing table that helped me decide what is the next hop: Row 1 of Router 1, Row 4 of Router 2
+
+
+2. 192.168.2.200 → 192.168.3.100
+List of routers the packet will go through: R2 → R3
+Relevant rows in the routing table that helped me decide what is the next hop: Row 1 of Router 2, Row 4 of Router 3
+
+
+3. 192.168.3.200 → 192.168.2.100
+List of routers the packet will go through: R3 → R2
+Relevant rows in the routing table that helped me decide what is the next hop: Row 1 of Router 3, Row 4 of Router 2
+
+
+4. 192.168.3.50 → 192.168.1.200
+List of routers the packet will go through: R3 → R1
+Relevant rows in the routing table that helped me decide what is the next hop: Row 1 of Router 3, Row 3 of Router 1
+
+
+5. 192.168.1.200 → 192.168.3.50
+List of routers the packet will go through: R1 → R3
+Relevant rows in the routing table that helped me decide what is the next hop: Row 1 of Router 1, Row 4 of Router 3
+
+
+6. 192.168.1.100 → 192.168.1.200
+List of routers the packet will go through: R1
+Relevant rows in the routing table that helped me decide what is the next hop: Row 3 of Router 1
+
+7. 192.168.2.150 → 192.168.2.200
+List of routers the packet will go through: R2
+Relevant rows in the routing table that helped me decide what is the next hop: Row 4 of Router 2
+
+8. 192.168.2.100 → 192.168.1.100
+List of routers the packet will go through: R2 → R1
+Relevant rows in the routing table that helped me decide what is the next hop: Row 1 of Router 2, Row 3 of Router 1
+
+
